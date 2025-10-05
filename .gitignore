@@ -1,0 +1,7 @@
+# Ignore all subdirectories (project repos created by script)
+*/
+
+# Keep important files
+!*.sh
+!*.md
+!.gitignore
