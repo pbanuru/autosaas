@@ -7,5 +7,10 @@
 
 # Keep specific directories
 !blog/
+!blog/**
 !.claude/
+!.claude/**
+!.cursor/
+!.cursor/**
+!.mcp.json
 !.cursor/

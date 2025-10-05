@@ -1,0 +1,52 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:docs.anthropic.com)",
+      "mcp__supabase__list_projects",
+      "mcp__supabase__list_tables",
+      "Bash(git add:*)",
+      "Bash(rg:*)",
+      "Bash(grep:*)",
+      "Bash(find:*)",
+      "Bash(npm run build:*)",
+      "WebFetch(domain:platform.openai.com)",
+      "Bash(python:*)",
+      "Bash(cat:*)",
+      "Bash(y-image-gen:*)",
+      "Bash(uv run:*)",
+      "Bash(source ~/.bash_aliases)",
+      "Bash(yvenv)",
+      "Bash(bash:*)",
+      "Bash(y-image-gen:*)",
+      "Bash(true)",
+      "WebFetch(domain:en.wikisource.org)",
+      "WebFetch(domain:victorianweb.org)",
+      "WebFetch(domain:huggingface.co)",
+      "Bash(echo:*)",
+      "mcp__supabase__search_docs",
+      "WebFetch(domain:modal.com)",
+      "Bash(mkdir:*)",
+      "WebFetch(domain:developers.facebook.com)",
+      "Bash(curl:*)",
+      "Bash(npm run dev:*)",
+      "Bash(npx @next/codemod@canary:*)",
+      "Bash(printf \"\\n\")",
+      "Bash(npm install:*)",
+      "Bash(npm run lint)",
+      "Bash(npm view:*)",
+      "Bash(npx tsc:*)",
+      "Bash(node:*)",
+      "mcp__stripe__fetch_stripe_resources",
+      "WebSearch",
+      "Bash(npx next:*)",
+      "WebFetch(domain:next-intl-docs.vercel.app)",
+      "WebFetch(domain:next-intl.dev)",
+      "Bash(npx next-intl:*)"
+    ],
+    "deny": []
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "supabase"
+  ]
+}
