@@ -63,11 +63,12 @@ cp -r "$SCRIPT_DIR/blog" app/blog
 git add app/blog
 git commit -m "Replace default blog with custom version"
 
-# Remove react-syntax-highlighter (unused and has vulnerabilities)
-echo "Removing unused react-syntax-highlighter..."
+# Remove react-syntax-highlighter and fix vulnerabilities
+echo "Removing unused react-syntax-highlighter and fixing vulnerabilities..."
 npm uninstall react-syntax-highlighter
+npm audit fix
 git add package.json package-lock.json
-git commit -m "Remove react-syntax-highlighter (unused, has vulnerabilities)"
+git commit -m "Remove react-syntax-highlighter and fix vulnerabilities"
 
 # Push all frontend changes
 git push

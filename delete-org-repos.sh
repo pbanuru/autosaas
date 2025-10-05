@@ -6,6 +6,9 @@ if ! command -v gh &> /dev/null; then
     exit 1
 fi
 
+# Store the script directory for relative paths
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 # Get organization name and repo name
 read -p "Enter organization name: " ORG_NAME
 read -p "Enter wrapper repo name: " REPO_NAME
@@ -33,11 +36,12 @@ if [ "$CONFIRM" != "yes" ]; then
 fi
 
 echo ""
-read -p "Type the organization name '$ORG_NAME' to confirm: " CONFIRM_ORG
 
-if [ "$CONFIRM_ORG" != "$ORG_NAME" ]; then
-    echo "Organization name doesn't match. Deletion cancelled."
-    exit 1
+# Delete local clone if it exists
+LOCAL_DIR="$SCRIPT_DIR/$REPO_NAME"
+if [ -d "$LOCAL_DIR" ]; then
+    echo "Deleting local clone at $LOCAL_DIR..."
+    rm -rf "$LOCAL_DIR"
 fi
 
 # Delete repos
