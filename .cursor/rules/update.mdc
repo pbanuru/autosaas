@@ -3,4 +3,4 @@ description:
 globs: 
 alwaysApply: true
 ---
-Keep [README.md](mdc:README.md), [README.md](mdc:lyricwinter/README.md), and [README.md](mdc:lyricwinter-backend/README.md) up to date
+Keep [README.md](mdc:README.md), [README.md](mdc:[app name]/README.md), and [README.md](mdc:[app name]-backend/README.md) up to date

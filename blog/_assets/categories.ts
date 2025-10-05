@@ -18,18 +18,18 @@ export const categories: categoryType[] = [
         titleShort: "Features",
         // The description of the category to display in the category page. Up to 160 characters.
         description:
-            "Here are the latest features we've added to LyricWinter. I'm constantly improving our AI voice cloning platform to help you create better audio stories.",
+            "Here are the latest features we've added to [app name]. I'm constantly improving our AI voice cloning platform to help you create better audio stories.",
         // A short version of the description above, only displayed in the <Header /> on mobile. Up to 60 characters.
-        descriptionShort: "Latest features added to LyricWinter.",
+        descriptionShort: "Latest features added to [app name].",
     },
     {
         slug: categorySlugs.tutorial,
         title: "How Tos & Tutorials",
         titleShort: "Tutorials",
         description:
-            "Learn how to use LyricWinter with these step-by-step tutorials. I'll show you how to create amazing AI-generated audiobooks from your stories.",
+            "Learn how to use [app name] with these step-by-step tutorials. I'll show you how to create amazing AI-generated audiobooks from your stories.",
         descriptionShort:
-            "Learn how to use LyricWinter with these step-by-step tutorials.",
+            "Learn how to use [app name] with these step-by-step tutorials.",
     },
     {
         slug: categorySlugs.writings,

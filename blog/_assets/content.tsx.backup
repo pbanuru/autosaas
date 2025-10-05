@@ -1,6 +1,6 @@
 import type { JSX } from "react";
 import { StaticImageData } from "next/image";
-import lyricwinterLogoImg from "@/app/blog/_assets/images/authors/lyricwinter-logo.png";
+import [app name]LogoImg from "@/app/blog/_assets/images/authors/[app name]-logo.png";
 import introducingSupabaseImg from "@/public/blog/introducing-supabase/header.png";
 
 // ==================================================================================================================================================================
@@ -32,18 +32,18 @@ export const categories: categoryType[] = [
     titleShort: "Features",
     // The description of the category to display in the category page. Up to 160 characters.
     description:
-      "Here are the latest features we've added to LyricWinter. I'm constantly improving our AI voice cloning platform to help you create better audio stories.",
+      "Here are the latest features we've added to [app name]. I'm constantly improving our AI voice cloning platform to help you create better audio stories.",
     // A short version of the description above, only displayed in the <Header /> on mobile. Up to 60 characters.
-    descriptionShort: "Latest features added to LyricWinter.",
+    descriptionShort: "Latest features added to [app name].",
   },
   {
     slug: categorySlugs.tutorial,
     title: "How Tos & Tutorials",
     titleShort: "Tutorials",
     description:
-      "Learn how to use LyricWinter with these step-by-step tutorials. I'll show you how to create amazing AI-generated audiobooks from your stories.",
+      "Learn how to use [app name] with these step-by-step tutorials. I'll show you how to create amazing AI-generated audiobooks from your stories.",
     descriptionShort:
-      "Learn how to use LyricWinter with these step-by-step tutorials.",
+      "Learn how to use [app name] with these step-by-step tutorials.",
   },
 ];
 
@@ -138,9 +138,9 @@ export const authors: authorType[] = [
     job: "AI Writing Assistant",
     // The description of the author to display in the author's bio. Up to 160 characters.
     description:
-      "Claude is an AI assistant specializing in technology writing and analysis. I help create insightful content about AI, voice technology, and the future of digital storytelling for the LyricWinter community.",
+      "Claude is an AI assistant specializing in technology writing and analysis. I help create insightful content about AI, voice technology, and the future of digital storytelling for the [app name] community.",
     // The avatar of the author to display in the author's bio and avatar badge. It's better to use a local image, but you can also use an external image (https://...)
-    avatar: lyricwinterLogoImg,
+    avatar: [app name]LogoImg,
     // A list of social links to display in the author's bio.
     socials: [
       {

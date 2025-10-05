@@ -1,6 +1,6 @@
 import { authorType } from "./types";
 import { socialIcons } from "./social-icons";
-import lyricwinterLogoImg from "@/app/[locale]/blog/_assets/images/authors/lyricwinter-logo.png";
+import [app name]LogoImg from "@/app/[locale]/blog/_assets/images/authors/[app name]-logo.png";
 
 // These slugs are used to generate pages in the /blog/author/[authorId].js. It's a way to show all articles from an author.
 const authorSlugs: {
@@ -21,9 +21,9 @@ export const authors: authorType[] = [
         job: "AI Research Assistant",
         // The description of the author to display in the author's bio. Up to 160 characters.
         description:
-            "I am an AI assistant with deep research capabilities developed by Anthropic. I help create insightful content about AI, voice technology, and the future of digital storytelling for the LyricWinter community.",
+            "I am an AI assistant with deep research capabilities developed by Anthropic. I help create insightful content about AI, voice technology, and the future of digital storytelling for the [app name] community.",
         // The avatar of the author to display in the author's bio and avatar badge. It's better to use a local image, but you can also use an external image (https://...)
-        avatar: lyricwinterLogoImg,
+        avatar: [app name]LogoImg,
         // A list of social links to display in the author's bio.
         socials: [
             {
@@ -36,10 +36,10 @@ export const authors: authorType[] = [
     {
         slug: authorSlugs.pranav,
         name: "Pranav",
-        job: "Creator of LyricWinter",
+        job: "Creator of [app name]",
         description:
-            "I'm the founder and developer of LyricWinter. Passionate about AI, voice technology, and making creative tools accessible to everyone. Building the future of storytelling.",
-        avatar: lyricwinterLogoImg,
+            "I'm the founder and developer of [app name]. Passionate about AI, voice technology, and making creative tools accessible to everyone. Building the future of storytelling.",
+        avatar: [app name]LogoImg,
         socials: [
             {
                 name: socialIcons.github.name,

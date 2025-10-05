@@ -5,7 +5,7 @@ Can you turn this into an article? And make sure to add any sort of text formatt
 
 # How to Add a New Blog Article
 
-This guide explains how to add a new article to the LyricWinter blog using our citation system.
+This guide explains how to add a new article to the [app name] blog using our citation system.
 
 ## Step 1: Create Article File
 
@@ -155,7 +155,7 @@ Before submitting:
    ```
 
 3. **Edit the article file**
-   - View the template file to see the structure and available styles at `lyricwinter/app/blog/_assets/articles/_template.tsx` and `lyricwinter/app/blog/_assets/styles.ts`
+   - View the template file to see the structure and available styles at `[app name]/app/blog/_assets/articles/_template.tsx` and `[app name]/app/blog/_assets/styles.ts`
    - Feel free to add new styles if they would be beneficial for future articles in `styles.ts`
    - Update the slug, title, description
    - Uncomment and fix the header image import

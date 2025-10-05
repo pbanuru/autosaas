@@ -5,7 +5,7 @@ import { styles } from "../styles";
 import { Citation, ReferenceList } from "../components/Citation";
 import { ModelInfoTable } from "@/components/generate/ModelInfoTable";
 import { MultilingualSupport } from "@/components/generate/MultilingualSupport";
-import headerImg from "@/public/blog/how-lyricwinter-works/header.png";
+import headerImg from "@/public/blog/how-[app name]-works/header.png";
 
 // Define your references array for citations
 const references = [
@@ -52,11 +52,11 @@ const references = [
 ];
 
 const article: articleType = {
-  slug: "how-lyricwinter-works",
+  slug: "how-[app name]-works",
 
-  title: "How LyricWinter Works: The Tech Behind AI Voice Stories",
+  title: "How [app name] Works: The Tech Behind AI Voice Stories",
 
-  description: "A dive into how LyricWinter works, from story parsing to AI voice cloning. Learn how we turn fanfiction and light-novels into immersive audio experiences.",
+  description: "A dive into how [app name] works, from story parsing to AI voice cloning. Learn how we turn fanfiction and light-novels into immersive audio experiences.",
 
   categories: [
     categories.find(c => c.slug === categorySlugs.feature)!,
@@ -69,8 +69,8 @@ const article: articleType = {
 
   image: {
     src: headerImg,
-    urlRelative: "/blog/how-lyricwinter-works/header.png",
-    alt: "LyricWinter architecture diagram showing the flow from text to audio with AI voice cloning",
+    urlRelative: "/blog/how-[app name]-works/header.png",
+    alt: "[app name] architecture diagram showing the flow from text to audio with AI voice cloning",
   },
 
   content: (
@@ -78,14 +78,14 @@ const article: articleType = {
       {/* Introduction section */}
       <section>
         <p className={styles.p}>
-          <strong>Hi! I&apos;m Pranav, the creator of LyricWinter.</strong> I want to show you exactly how LyricWinter transforms your written stories into immersive audio experiences with distinct character voices. What started as a side project to fuel my desire to listen rather than read, has evolved into a sophisticated AI system that can handle hundreds of dialogue clips concurrently.
+          <strong>Hi! I&apos;m Pranav, the creator of [app name].</strong> I want to show you exactly how [app name] transforms your written stories into immersive audio experiences with distinct character voices. What started as a side project to fuel my desire to listen rather than read, has evolved into a sophisticated AI system that can handle hundreds of dialogue clips concurrently.
         </p>
       </section>
 
       <section>
         <h2 className={styles.h2}>The Core Challenge: Multicharacter Voice Cloned Emotive Narration</h2>
         <p className={styles.p}>
-          The fundamental problem LyricWinter solves is simple to state but complex to execute: how do you take a written story with multiple characters and generate audio where each character has their own high quality, consistent voice associated with them? 
+          The fundamental problem [app name] solves is simple to state but complex to execute: how do you take a written story with multiple characters and generate audio where each character has their own high quality, consistent voice associated with them? 
         </p>
         <p className={styles.p}>
           Ideally we want all of the following qualities in our system:
@@ -103,13 +103,13 @@ const article: articleType = {
           <li className={styles.li}>Fast</li>
           <li className={styles.li}>Affordable</li>
         </ul>
-        <p className={styles.p}>We&apos;ll get into how to achieve all of these qualities in another article. First, let&apos;s understand how LyricWinter works.</p>
+        <p className={styles.p}>We&apos;ll get into how to achieve all of these qualities in another article. First, let&apos;s understand how [app name] works.</p>
       </section>
 
       <section>
         <h2 className={styles.h2}>Step 1: Understanding Your Story with AI</h2>
         <p className={styles.p}>
-          When you paste your story into LyricWinter, the first thing that happens is <strong>AI-powered story parsing</strong>.
+          When you paste your story into [app name], the first thing that happens is <strong>AI-powered story parsing</strong>.
         </p>
 
         <h3 className={styles.h3}>Character Detection</h3>
@@ -119,7 +119,7 @@ const article: articleType = {
 
         <h3 className={styles.h3}>Dialogue Extraction & Attribution</h3>
         <p className={styles.p}>
-          Next comes: extracting dialogue. In order to narrate, we need to know what each speaking character is saying. LyricWinter uses AI alongside the character list from the previous step to extract the dialogue. This is quite tricky, as dialogue attribution is not always obvious. Consider this challenging example which a user submitted for debugging:
+          Next comes: extracting dialogue. In order to narrate, we need to know what each speaking character is saying. [app name] uses AI alongside the character list from the previous step to extract the dialogue. This is quite tricky, as dialogue attribution is not always obvious. Consider this challenging example which a user submitted for debugging:
         </p>
 
         <div className={styles.code}>
@@ -147,7 +147,7 @@ Hermione had been quiet up till now. "This is incredibly dangerous."
           Hermione and Ron are the most likely to say &quot;Are you mad?&quot; but since Ron later says &quot;What if we get caught?&quot; we can attribute the previous dialogue to him. Regarding the &quot;So is doing nothing,&quot; we know it is said by a &quot;he&quot;, so it could be either Ron or Harry, but given Harry&apos;s decisiveness, we can attribute it to him.
           </p>
           <p className={styles.p}>
-          LyricWinter&apos;s AI analyzes conversation patterns, character personalities, and contextual clues to correctly parse this into individual dialogue clips:
+          [app name]&apos;s AI analyzes conversation patterns, character personalities, and contextual clues to correctly parse this into individual dialogue clips:
         </p>
 
         <div className="max-h-48 overflow-y-auto border border-base-300 rounded-box mb-4">
@@ -230,7 +230,7 @@ Hermione had been quiet up till now. "This is incredibly dangerous."
         </div>
 
         <p className={styles.p}>
-          This step might take 1-2 minutes, or longer for longer stories. There are further optimizations that could be made to cut this down to ~10 seconds. i.e. finetuning an LLM on this task and running it on groq<Citation number={7} />. As LyricWinter gets more popular, I&apos;ll work on adding this.
+          This step might take 1-2 minutes, or longer for longer stories. There are further optimizations that could be made to cut this down to ~10 seconds. i.e. finetuning an LLM on this task and running it on groq<Citation number={7} />. As [app name] gets more popular, I&apos;ll work on adding this.
           </p>
           <p className={styles.p}>
           Now then, each dialogue speaker pair is almost ready to be narrated.
@@ -243,7 +243,7 @@ Hermione had been quiet up till now. "This is incredibly dangerous."
       <p className={styles.p}>There are two scenarios:</p>
 
       <ol className="list-decimal list-outside text-base-content/90 leading-relaxed mb-4 pl-6">
-        <li className="mb-2">Some user has added a public voice for &quot;Harry Potter&quot; on <a href="https://lyricwinter.com/dashboard/voices" className={styles.a}>My Voices</a></li>
+        <li className="mb-2">Some user has added a public voice for &quot;Harry Potter&quot; on <a href="https://[app name].com/dashboard/voices" className={styles.a}>My Voices</a></li>
         <li className="mb-2">No one has added a voice for &quot;Harry Potter&quot;</li>
       </ol>
 
@@ -293,7 +293,7 @@ Hermione had been quiet up till now. "This is incredibly dangerous."
 
       <p className={styles.p}>Additionally, you can see the models that were suggested for each voice. Different AI labs release different models for voice cloning and text to speech, and these different models perform differently on different voices. The AI is not too good at suggesting models right now, so before you generate audio, you have the option to tweak the AI&apos;s suggestions, both the voice model and the voice itself.</p>
 
-      <p className={styles.p}>Here&apos;s a breakdown of the voice models available in LyricWinter and their characteristics:</p>
+      <p className={styles.p}>Here&apos;s a breakdown of the voice models available in [app name] and their characteristics:</p>
 
       <div className="my-6 flex justify-center">
         <ModelInfoTable availableAliases={['LW1', 'LW2', 'LW3', 'LW6', 'LW7']} showBorders={true} />
@@ -331,7 +331,7 @@ Donald spun around to face her, his eyes blazing with anger. "No, Ariana. We can
         </p>
 
         <p className={styles.p}>
-          LyricWinter&apos;s AI analyzes the emotional context surrounding each line to guide the voice model&apos;s emotional expression. Here&apos;s which models support emotional steering:
+          [app name]&apos;s AI analyzes the emotional context surrounding each line to guide the voice model&apos;s emotional expression. Here&apos;s which models support emotional steering:
         </p>
 
         <h4 className={styles.h3}>Models WITH Emotional Control:</h4>
@@ -344,7 +344,7 @@ Donald spun around to face her, his eyes blazing with anger. "No, Ariana. We can
         <ul className={styles.ul}>
           <li className={styles.li}><strong>LW1 (tts-1+rvc)</strong><Citation number={1} /><Citation number={4} />: Training based voice cloning</li>
           <li className={styles.li}><strong>LW6 (fishaudio)</strong><Citation number={2} />: One shot voice cloning</li>
-          <li className={styles.li}><strong>LW7 (sparktts)</strong><Citation number={8} />: One shot voice cloning. While the underlying technology supports 24 emotion categories, LyricWinter&apos;s current implementation doesn&apos;t use contextual emotion analysis.</li>
+          <li className={styles.li}><strong>LW7 (sparktts)</strong><Citation number={8} />: One shot voice cloning. While the underlying technology supports 24 emotion categories, [app name]&apos;s current implementation doesn&apos;t use contextual emotion analysis.</li>
         </ul>
 
         <p className={styles.p}>
@@ -369,17 +369,17 @@ Donald spun around to face her, his eyes blazing with anger. "No, Ariana. We can
       <section>
         <h2 className={styles.h2}>Try It Yourself!</h2>
         <p className={styles.p}>
-          The best way to understand LyricWinter is to experience it. Head over to the <strong><a href="https://lyricwinter.com/generate" className={styles.a}>Generate page</a></strong>, paste in your favorite fanfiction, light novel, or short story, and watch as AI brings your favorite characters into the audio domain with immersion. We have a generous English-supported free tier with SparkTTS, so you can experiment without any commitment.
+          The best way to understand [app name] is to experience it. Head over to the <strong><a href="https://[app name].com/generate" className={styles.a}>Generate page</a></strong>, paste in your favorite fanfiction, light novel, or short story, and watch as AI brings your favorite characters into the audio domain with immersion. We have a generous English-supported free tier with SparkTTS, so you can experiment without any commitment.
         </p>
         <p className={styles.p}>
-          Whether you&apos;re a fanfiction writer wanting to hear your stories aloud, a light novel reader looking for narration tools, or just curious about AI voice technology, LyricWinter offers something unique: the ability to transform any text into an immersive audio experience with distinct character voices, all in just a few clicks.
+          Whether you&apos;re a fanfiction writer wanting to hear your stories aloud, a light novel reader looking for narration tools, or just curious about AI voice technology, [app name] offers something unique: the ability to transform any text into an immersive audio experience with distinct character voices, all in just a few clicks.
         </p>
         <p className={styles.p}>
-          <strong>Happy story telling!</strong> And if you have any questions or feedback, feel free to reach out. I&apos;m always excited to hear how people are using LyricWinter and what features they&apos;d like to see next.
+          <strong>Happy story telling!</strong> And if you have any questions or feedback, feel free to reach out. I&apos;m always excited to hear how people are using [app name] and what features they&apos;d like to see next.
         </p>
 
         <h3 className={styles.h3}>Note</h3>
-        <p>Impersonation or nefarious use is not allowed! This is for recreation and personal use. LyricWinter is not affiliated with, nor does it claim ownership of, any user-uploaded voices. As highlighted in this article, LyricWinter is input and voice agnostic system. Examples given are for illustration purposes only.</p>
+        <p>Impersonation or nefarious use is not allowed! This is for recreation and personal use. [app name] is not affiliated with, nor does it claim ownership of, any user-uploaded voices. As highlighted in this article, [app name] is input and voice agnostic system. Examples given are for illustration purposes only.</p>
       </section>
 
       {/* References section - automatically styled */}
