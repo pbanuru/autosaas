@@ -52,6 +52,23 @@ echo "Installing frontend dependencies..."
 cd frontend
 npm install
 mv .env.example .env.local
+
+# Replace default blog with custom blog
+echo "Replacing blog with custom version..."
+rm -rf app/blog
+cp -r /Users/yn/Documents/code/repocreate/blog app/blog
+git add app/blog
+git commit -m "Replace default blog with custom version"
+
+# Remove react-syntax-highlighter (unused and has vulnerabilities)
+echo "Removing unused react-syntax-highlighter..."
+npm uninstall react-syntax-highlighter
+git add package.json package-lock.json
+git commit -m "Remove react-syntax-highlighter (unused, has vulnerabilities)"
+
+# Push all frontend changes
+git push
+
 cd ..
 
 # Copy CLAUDE.md to wrapper repo and commit
