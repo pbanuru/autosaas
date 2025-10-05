@@ -6,6 +6,9 @@ if ! command -v gh &> /dev/null; then
     exit 1
 fi
 
+# Store the script directory for relative paths
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 # Get organization name and repo name
 read -p "Enter organization name: " ORG_NAME
 read -p "Enter wrapper repo name: " REPO_NAME
@@ -56,7 +59,7 @@ mv .env.example .env.local
 # Replace default blog with custom blog
 echo "Replacing blog with custom version..."
 rm -rf app/blog
-cp -r /Users/yn/Documents/code/repocreate/blog app/blog
+cp -r "$SCRIPT_DIR/blog" app/blog
 git add app/blog
 git commit -m "Replace default blog with custom version"
 
@@ -71,11 +74,14 @@ git push
 
 cd ..
 
-# Copy CLAUDE.md to wrapper repo and commit
-echo "Adding CLAUDE.md to wrapper repo..."
-cp /Users/yn/Documents/code/repocreate/claude.md.example CLAUDE.md
-git add CLAUDE.md
-git commit -m "Add CLAUDE.md documentation"
+# Copy CLAUDE.md and config folders to wrapper repo and commit
+echo "Adding CLAUDE.md and config files to wrapper repo..."
+cp "$SCRIPT_DIR/claude.md.example" CLAUDE.md
+cp -r "$SCRIPT_DIR/.claude" .claude
+cp -r "$SCRIPT_DIR/.cursor" .cursor
+cp "$SCRIPT_DIR/.mcp.json" .mcp.json
+git add CLAUDE.md .claude .cursor .mcp.json
+git commit -m "Add CLAUDE.md and editor configuration"
 git push
 
 echo "Done! Frontend is set up with ShipFast boilerplate."
