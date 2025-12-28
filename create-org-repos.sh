@@ -16,19 +16,19 @@ read -p "Enter wrapper repo name: " REPO_NAME
 # Create wrapper and backend repos (frontend will be created from ShipFast template)
 echo "Creating wrapper repo: $REPO_NAME"
 gh repo create "$ORG_NAME/$REPO_NAME" \
-    --public \
+    --private \
     --add-readme \
     --gitignore Node
 
 echo "Creating backend repo: $REPO_NAME-backend"
 gh repo create "$ORG_NAME/$REPO_NAME-backend" \
-    --public \
+    --private \
     --add-readme \
     --gitignore Node
 
 # Create frontend repo from ShipFast template
 echo "Creating frontend repo from ShipFast template..."
-gh repo create "$ORG_NAME/$REPO_NAME-frontend" --public
+gh repo create "$ORG_NAME/$REPO_NAME-frontend" --private
 
 # Clone ShipFast into a temp directory, then push to frontend repo
 echo "Setting up ShipFast boilerplate for frontend..."

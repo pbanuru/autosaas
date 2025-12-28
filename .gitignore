@@ -14,3 +14,4 @@
 !.cursor/
 !.cursor/**
 !.mcp.json
+.DS_Store
